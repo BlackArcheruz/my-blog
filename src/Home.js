@@ -3,29 +3,35 @@ import BlogList from './BlogList';
 
 const Home = () => {
 
-    const [blogs, setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'Muhammad Siddiq', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'Others', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'Muhammad Siddiq', id: 3 }
-    ]);
-
-    const [name,setName] = useState('Muhammad Siddiq')
-
-    const handleDelete = (id)=>{
-        const newBlogs = blogs.filter(blog=> blog.id !== id);
-        setBlogs(newBlogs);
-    }
+    const [blogs, setBlogs] = useState(null);
+    const[isPending,setIsPending] = useState(true);
+    const[error,setError] = useState(null);
 
     useEffect(()=>{
-        console.log('use effect ran');
-        console.log(name);
-    },[name]);
+        setTimeout(()=>(
+            fetch('http://localhost:8000/blogs')
+            .then(res=>{
+                if(!res.ok){
+                    throw Error('Could not to fetch the data for that resourse');
+                }
+                return res.json();
+            })
+            .then((data)=>{
+                setBlogs(data);
+                setIsPending(false)
+            })
+            .catch(e=>{
+                setError(e.message);
+                setIsPending(false)
+            }
+            )),1000)
+    },[]);
 
     return ( 
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/>
-            <button onClick={()=>setName('Usmon')}>change name</button>
-            <p>{name}</p>
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
+            {blogs && <BlogList blogs={blogs} title="All Blogs!"/>}
         </div>
     );
 }

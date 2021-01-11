@@ -1,0 +1,16 @@
+{
+    "blogs": [
+      {
+        "title": "My Web Site !",
+        "body": "Today I will release my first Web Site !",
+        "author": "Muhammad Siddiq",
+        "id": 1
+      },
+      {
+        "title": "First Web Site!",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, pariatur? Alias assumenda facilis eius dolorum nihil corrupti, hic, atque exercitationem voluptate omnis quam ex sit laboriosam expedita? Asperiores, beatae delectus.",
+        "author": "Others",
+        "id": 2
+      }
+    ]
+  }
