@@ -52,3 +52,122 @@
 .blog-preview a{
   text-decoration: none;
 }
+
+/* blog details page */
+.blog-details h2 {
+  font-size: 24px;
+  color: #ed1b24;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.blog-details button {
+  background: #ed1b24;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.about h1{
+  text-align: center;
+}
+.about p{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.about .wallpaper{
+  background-image: url(../src/img/Minimal-Patterns-Sound-Waves-Wallpaper.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px 10px;
+}
+.wallpaper h1{
+  text-align: center;
+  color: #fff;
+}
+.wallpaper p{
+  color: #fff;
+}
+.about footer{
+  text-align: center;
+  margin-top: 10%;
+}
+.about p{
+  margin-top: 10px;
+}
+/* create new blog form */
+.create {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+  font-size: 18px;
+}
+.create h2 {
+  color: #ed1b24;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 18px 10px;
+  margin: 12px 0;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(206, 206, 206);
+  color: rgb(255, 255, 255);
+  border-radius: 25px;
+  font-size: 18px;
+}
+.create select:focus{
+  border: rgb(223, 223, 223);
+  outline: none;
+  background-color: rgb(175, 175, 175);
+  transition: .3s background-color;
+}
+.create select{
+  color: #fff;
+}
+.create input:focus{
+  border: rgb(223, 223, 223);
+  background-color: rgb(175, 175, 175);
+  outline: none;
+  transition: .3s background-color;
+}
+.create textarea:focus{
+  border: rgb(223, 223, 223);
+  outline: none;
+  background-color: rgb(175, 175, 175);
+  transition: .3s background-color;
+}
+.create textarea::placeholder{
+  color: #fff;
+}
+.create input::placeholder{
+  color: #fff;
+}
+.create button {
+  background: #ed1b24;
+  color: #fff;
+  border: 0;
+  padding: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 18px;
+  outline: none;
+}
+.create button:hover{
+  background-color:#333;
+  transition: .3s ease background-color;
+}
