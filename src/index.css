@@ -171,3 +171,27 @@
   background-color:#333;
   transition: .3s ease background-color;
 }
+#text{
+  font-size: 18px;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.not-found{
+  font-size: 24px;
+}
+.not-found a{
+  color: #fff;
+  text-decoration: none;
+  background-color: #ed1b24;
+  padding: 5px;
+  border-radius: 10px;
+}
+.not-found a:hover{
+  background-color: #333;
+  transition: .3s ease background-color;
+}

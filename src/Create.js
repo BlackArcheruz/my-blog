@@ -1,15 +1,26 @@
 import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 const Create = () => {
     const [title,setTitle] = useState('');
     const [body,setBody] = useState('');
     const [author,setAuthor] = useState('Muhammad Siddiq');
+    const history = useHistory();
 
     const handleSubmit = (e)=>{
         e.preventDefault();
         const blog = {title, body,author}
 
-        console.log(blog);
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(blog)
+        }).then(
+            <p id="text">Blog Added !</p>,
+            history.push('/')
+        )   
     }
 
     return ( 
@@ -38,7 +49,7 @@ const Create = () => {
                     <option value="Others">Others</option>
                 </select>
                 <button>Add Blog</button>
-                <p></p>
+                <p id="text"></p>
             </form>
         </div>
     );
