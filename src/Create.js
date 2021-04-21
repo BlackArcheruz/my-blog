@@ -11,7 +11,7 @@ const Create = () => {
         e.preventDefault();
         const blog = {title, body,author}
 
-        fetch('http://localhost:8000/blogs', {
+        fetch('https://api.npoint.io/60d7da8dd16ff43ca34e/blogs', {
             method: 'POST',
             headers: {
                 "Content-type": "application/json"
