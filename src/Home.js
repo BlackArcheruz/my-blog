@@ -2,7 +2,7 @@ import BlogList from './BlogList';
 import useFetch from './useFetch';
 
 const Home = () => {
-    const {data:blogs,isPending,error} = useFetch('http://localhost:8000/blogs');
+    const {data:blogs,isPending,error} = useFetch('https://api.npoint.io/60d7da8dd16ff43ca34e/blogs');
     return ( 
         <div className="home">
             {error && <div>{error}</div>}
